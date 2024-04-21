@@ -5,7 +5,7 @@ import type { Theme } from '../types';
 
 export const MuiCard = {
   styleOverrides: {
-    root: ({ theme }) => {
+    root: ({ theme }: { theme: Theme }) => { // Explicitly type 'theme' as 'Theme'
       return {
         borderRadius: '20px',
         [`&.${paperClasses.elevation1}`]: {

@@ -1,5 +1,5 @@
-import { getSiteURL } from '@/lib/get-site-url';
-import { LogLevel } from '@/lib/logger';
+import { getSiteURL } from '@/libs/get-site-url';
+import { LogLevel } from '@/libs/logger';
 
 export interface Config {
   site: { name: string; description: string; themeColor: string; url: string };

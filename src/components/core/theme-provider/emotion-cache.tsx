@@ -1,10 +1,10 @@
 'use client';
 
-import * as React from 'react';
-import { useServerInsertedHTML } from 'next/navigation';
-import createCache from '@emotion/cache';
 import type { EmotionCache, Options as OptionsOfCreateCache } from '@emotion/cache';
+import createCache from '@emotion/cache';
 import { CacheProvider as DefaultCacheProvider } from '@emotion/react';
+import { useServerInsertedHTML } from 'next/navigation';
+import * as React from 'react';
 
 interface Registry {
   cache: EmotionCache;
@@ -27,7 +27,7 @@ export default function NextAppDirEmotionCacheProvider(props: NextAppDirEmotionC
     // eslint-disable-next-line @typescript-eslint/unbound-method -- Expected
     const prevInsert = cache.insert;
     let inserted: { name: string; isGlobal: boolean }[] = [];
-    cache.insert = (...args) => {
+    cache.insert = (...args: any[]) => {
       const [selector, serialized] = args;
 
       if (cache.inserted[serialized.name] === undefined) {
