@@ -1,6 +1,6 @@
 import userModel from '@/models/user-model';
-import contract from '@/restapi/contracts';
-import { userSchema } from '@/restapi/schemas/user-schema';
+import contract from '@/rest-api/contracts';
+import { userSchema } from '@/rest-api/schemas/user-schema';
 import { createNextHandler } from '@ts-rest/serverless/next';
 import { z } from 'zod';
 

@@ -1,6 +1,6 @@
 'use client';
 
-import contract from '@/restapi/contracts';
+import contract from '@/rest-api/contracts';
 import { generateOpenApi } from '@ts-rest/open-api';
 import SwaggerUI from 'swagger-ui-react';
 import 'swagger-ui-react/swagger-ui.css';
